@@ -1,8 +1,8 @@
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 
 
-class ECGWaves:
+class DataLoader:
     def __init__(self):
         self.data = None
         self.data_path = 'data/100_MLII.dat'
@@ -11,7 +11,10 @@ class ECGWaves:
         self.plot_data()
 
     def load_data(self):
-        self.data = np.genfromtxt(self.data_path)
+        self.data = np.loadtxt(self.data_path)
+
+    def get_signal(self):
+        return self.data
 
     def plot_data(self):
         plt.plot(self.data)
