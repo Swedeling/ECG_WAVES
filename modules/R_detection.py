@@ -150,7 +150,7 @@ class PanTompkins:
         plt.xlabel('Time [ms]')
         plt.ylabel('Amplitude [mV]')
 
-        plt.xlim([0, 2000])
+        plt.xlim([250, 2000])
         plt.ylim([-1, 1])
 
         plt.show()
